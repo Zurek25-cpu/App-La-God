@@ -1,0 +1,123 @@
+/* style.css */
+body {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.screen {
+    display: none;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.active { display: flex; }
+
+/* Animação da Logo */
+.fade-in-logo {
+    width: 250px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    50% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0.5; transform: scale(0.95); }
+}
+
+/* Menu de Personagens */
+.char-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding: 20px;
+}
+
+.char-card {
+    background: #1a1a1a;
+    border: 2px solid #ffd700;
+    padding: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Barra de Vida */
+.hp-container {
+    width: 90%;
+    height: 30px;
+    background: #333;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+#hp-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff5555);
+    transition: width 0.5s ease;
+}
+
+/* Efeito de Vidro para o Resultado Final */
+.final-result {
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.result-box {
+    border: 3px solid #ffd700;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #000);
+    box-shadow: 0 0 20px #ffd700;
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* style.css */
+#party-status {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    border-bottom: 1px solid #ffd700;
+    z-index: 100;
+}
+
+.party-member {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.party-hp-small {
+    height: 4px;
+    width: 50px;
+    background: #444;
+    margin-top: 3px;
+}
+
+.hp-fill-small {
+    height: 100%;
+    background: #ff4444;
+}
